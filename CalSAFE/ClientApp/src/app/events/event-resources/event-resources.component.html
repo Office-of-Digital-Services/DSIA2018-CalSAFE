@@ -1,0 +1,70 @@
+<h1>Resources</h1>
+
+<div fxLayout fxLayoutGap="15px">
+  <div fxFlex>
+    <mat-accordion>
+      <mat-expansion-panel [expanded]="resourceIndex === i" (opened)="setResourceIndex(i)" *ngFor="let resource of resources; let i = index" hideToggle="true">
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <h3>{{resource.title}}</h3>
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+
+        <div fxLayout="row">
+          <div fxFlex="30%">
+            Phone No.
+          </div>
+          <div fxFlex>
+            {{resource.phoneNo}}
+          </div>
+        </div>
+
+        <div *ngIf="resource.address !== null">
+          <div fxLayout="row">
+            <div fxFlex="30%">
+              Address
+            </div>
+            <div fxFlex>
+              {{resource.address.addressLine1}}
+            </div>
+          </div>
+
+          <div fxLayout="row" *ngIf="resource.address.addressLine2 !== ''">
+            <div fxFlex="30%">
+
+            </div>
+            <div fxFlex>
+              {{resource.address.addressLine2}}
+            </div>
+          </div>
+
+          <div fxLayout="row">
+            <div fxFlex="30%">
+              City, State Zip
+            </div>
+            <div fxFlex>
+              {{resource.address.city}}, {{resource.address.state}} {{resource.address.postalCode}}
+            </div>
+          </div>
+        </div>
+
+        <div fxLayout="row">
+          <div fxFlex="30%">
+            Website
+          </div>
+          <div fxFlex>
+            <a href="{{resource.website}}">{{resource.website}}</a>
+          </div>
+        </div>
+
+        <!--<mat-action-row>-->
+        <!-- Action Row Buttons -->
+        <!--<button mat-mini-fab routerLink="/events/{{event.id}}" color="warn" matTooltip="Map"><mat-icon>map</mat-icon></button>-->
+        <!--<button mat-mini-fab color="warn" matTooltip="Check in"><mat-icon>location_on</mat-icon></button>-->
+        <!--<button mat-mini-fab color="warn" matTooltip="Resources"><mat-icon>local_hospital</mat-icon></button>-->
+        <!--<button mat-mini-fab (click)="openPhotoUploadDialog()" color="warn" matTooltip="Upload photo"><mat-icon>add_a_photo</mat-icon></button>-->
+        <!--</mat-action-row>-->
+      </mat-expansion-panel>
+    </mat-accordion>
+  </div>
+</div>

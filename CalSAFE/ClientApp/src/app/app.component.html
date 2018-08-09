@@ -1,0 +1,12 @@
+<mat-sidenav-container fxFlexFill>
+  <mat-sidenav #sidenav role="navigation">
+    <safe-sidenav (closeSidenav)="sidenav.close()"></safe-sidenav>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <safe-navbar (toggleSidenav)="sidenav.toggle()"></safe-navbar>
+
+    <div id="main-content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-sidenav-content>
+</mat-sidenav-container>

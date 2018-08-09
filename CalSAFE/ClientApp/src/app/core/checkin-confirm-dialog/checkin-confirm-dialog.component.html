@@ -1,0 +1,38 @@
+<h2 mat-dialog-title>Check in</h2>
+<mat-dialog-content>
+  <form class="upload-photo-form">
+    <div fxLayout="column">
+      <mat-form-field fxFlex>
+        <mat-label>Name</mat-label>
+        <input matInput placeholder="Christopher Staggs" />
+      </mat-form-field>
+
+      <mat-form-field fxFlex>
+        <mat-label>Address</mat-label>
+        <input matInput placeholder="744 P St" />
+      </mat-form-field>
+
+      <mat-form-field fxFlex>
+        <mat-label>Phone Number</mat-label>
+        <input matInput placeholder="(916) 651-7719" />
+      </mat-form-field>
+
+      <mat-form-field fxFlex>
+        <mat-label>Email</mat-label>
+        <input matInput placeholder="christopher.staggs@dss.ca.gov" />
+      </mat-form-field>
+
+      <mat-form-field fxFlex>
+        <mat-select required>
+          <mat-option value="1">Shelter</mat-option>
+          <mat-option value="2">Friends/Family</mat-option>
+          <mat-option value="3">Other</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button [mat-dialog-close]="true">Confirm</button>
+</mat-dialog-actions>

@@ -1,0 +1,10 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>Evacuations</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-nav-list>
+      <a routerLink="/evacuations/{{evacuation.id}}" mat-list-item *ngFor="let evacuation of evacuations">{{evacuation.title}}</a>
+    </mat-nav-list>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,39 @@
+<mat-toolbar color="accent">
+  <mat-toolbar-row>
+    <button mat-icon-button (click)="toggle()"><mat-icon>menu</mat-icon></button>
+    <a routerLink="/dashboard" mat-button aria-label="Cal Safe Home">
+      <img id="CalSAFE" src="CalSAFE_black.png" />
+    </a>
+
+    <span class="navbar-fill-space"></span>
+
+    <div fxHide.xs>
+      Sacramento County
+    </div>
+
+    <mat-menu #settingsMenu="matMenu" [overlapTrigger]="false">
+      <button mat-menu-item routerLink="/user/profile">
+        <span>Profile</span>
+      </button>
+      <button mat-menu-item routerLink="/user/settings">
+        <span>Settings</span>
+      </button>
+      <button mat-menu-item routerLink="">
+        <span>Log out</span>
+      </button>
+    </mat-menu>
+
+    <button mat-icon-button [matMenuTriggerFor]="settingsMenu" aria-label="Settings Menu">
+      <mat-icon>person</mat-icon>
+    </button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-toolbar>
+  <mat-toolbar-row>
+    <span class="navbar-fill-space"></span>
+    <div class="warning-bar">
+      For immediate assistance CALL 911
+    </div>
+    <span class="navbar-fill-space"></span>
+  </mat-toolbar-row>
+</mat-toolbar>

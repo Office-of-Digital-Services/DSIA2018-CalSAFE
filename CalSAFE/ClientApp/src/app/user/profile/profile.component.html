@@ -1,0 +1,112 @@
+<div fxLayout fxLayoutAlign="center">
+  <!-- Main content -->
+  <div fxFlex="70%">
+    <mat-card class="example-card">
+      <mat-card-header>
+        <mat-card-title>Christopher Staggs</mat-card-title>
+        <mat-card-subtitle>Sacramento County</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+
+        <form class="upload-photo-form">
+          <div fxLayout="column">
+            <mat-form-field fxFlex>
+              <mat-label>Name</mat-label>
+              <input matInput placeholder="Christopher Staggs" />
+            </mat-form-field>
+
+            <mat-form-field fxFlex>
+              <mat-label>Address</mat-label>
+              <input matInput placeholder="744 P St" />
+            </mat-form-field>
+
+            <mat-form-field fxFlex>
+              <mat-label>County</mat-label>
+              <mat-select required>
+                <mat-option value="1">Alameda</mat-option>
+                <mat-option value="2">Alpine</mat-option>
+                <mat-option value="3">Amador</mat-option>
+                <mat-option value="4">Butte</mat-option>
+                <mat-option value="5">Calaveras</mat-option>
+                <mat-option value="6">Colusa</mat-option>
+                <mat-option value="7">Contra Costa</mat-option>
+                <mat-option value="8">Del Norte</mat-option>
+                <mat-option value="9">El Dorado</mat-option>
+                <mat-option value="10">Fresno</mat-option>
+                <mat-option value="11">Glenn</mat-option>
+                <mat-option value="12">Humboldt</mat-option>
+                <mat-option value="13">Imperial</mat-option>
+                <mat-option value="14">Inyo</mat-option>
+                <mat-option value="15">Kern</mat-option>
+                <mat-option value="16">Kings</mat-option>
+                <mat-option value="17">Lake</mat-option>
+                <mat-option value="18">Lassen</mat-option>
+                <mat-option value="19">Los Angeles</mat-option>
+                <mat-option value="20">Madera</mat-option>
+                <mat-option value="21">Marin</mat-option>
+                <mat-option value="22">Mariposa</mat-option>
+                <mat-option value="23">Mendocino</mat-option>
+                <mat-option value="24">Merced</mat-option>
+                <mat-option value="25">Modoc</mat-option>
+                <mat-option value="26">Mono</mat-option>
+                <mat-option value="27">Monterey</mat-option>
+                <mat-option value="28">Napa</mat-option>
+                <mat-option value="29">Nevada</mat-option>
+                <mat-option value="30">Orange</mat-option>
+                <mat-option value="31">Placer</mat-option>
+                <mat-option value="32">Plumas</mat-option>
+                <mat-option value="33">Riverside</mat-option>
+                <mat-option value="34">Sacramento</mat-option>
+                <mat-option value="35">San Benito</mat-option>
+                <mat-option value="36">San Bernardino</mat-option>
+                <mat-option value="37">San Diego</mat-option>
+                <mat-option value="38">San Francisco</mat-option>
+                <mat-option value="39">San Joaquin</mat-option>
+                <mat-option value="40">San Luis Obispo</mat-option>
+                <mat-option value="41">San Mateo</mat-option>
+                <mat-option value="42">Santa Barbara</mat-option>
+                <mat-option value="43">Santa Clara</mat-option>
+                <mat-option value="44">Santa Cruz</mat-option>
+                <mat-option value="45">Shasta</mat-option>
+                <mat-option value="46">Sierra</mat-option>
+                <mat-option value="47">Siskiyou</mat-option>
+                <mat-option value="48">Solano</mat-option>
+                <mat-option value="49">Sonoma</mat-option>
+                <mat-option value="50">Stanislaus</mat-option>
+                <mat-option value="51">Sutter</mat-option>
+                <mat-option value="52">Tehama</mat-option>
+                <mat-option value="53">Trinity</mat-option>
+                <mat-option value="54">Tulare</mat-option>
+                <mat-option value="55">Tuolumne</mat-option>
+                <mat-option value="56">Ventura</mat-option>
+                <mat-option value="57">Yolo</mat-option>
+                <mat-option value="58">Yuba</mat-option>
+              </mat-select>
+            </mat-form-field>
+
+            <mat-form-field fxFlex>
+              <mat-label>E-mail</mat-label>
+              <input matInput placeholder="christopher.staggs@dss.ca.gov" />
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+
+            <mat-form-field fxFlex>
+              <mat-label>Phone Number</mat-label>
+              <input matInput placeholder="(916) 651-7719" />
+            </mat-form-field>
+
+            <mat-form-field fxFlex>
+              <textarea matInput placeholder="Do you require assistance?"></textarea>
+            </mat-form-field>
+          </div>
+        </form>
+
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button>Cancel</button>
+        <a routerLink="" mat-button color="primary">SAVE</a>
+      </mat-card-actions>
+    </mat-card>
+
+  </div>
+</div>

@@ -1,0 +1,70 @@
+<h1>Active Events</h1>
+
+<mat-accordion>
+  <mat-expansion-panel [expanded]="eventIndex === i" (opened)="setEventIndex(i)" *ngFor="let event of events; let i = index; first as first" hideToggle="true">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <h3>{{event.title}}</h3>
+      </mat-panel-title>
+    </mat-expansion-panel-header>
+
+    <div fxLayout>
+
+      <!-- Event Data -->
+      <div fxFlex>
+
+        <div fxLayout="column" fxLayoutGap="10px">
+          <div fxFlex="30%" fxFlexOffset="20px;">
+            <strong>Location</strong>
+          </div>
+          <div fxFlex>
+            {{event.location}}
+          </div>
+
+          <div fxFlex="30%">
+            <strong>County</strong>
+          </div>
+          <div fxFlex>
+            {{event.county}}
+          </div>
+
+          <div fxFlex="30%">
+            <strong>Containment</strong>
+          </div>
+          <div fxFlex>
+            {{event.containment}}
+          </div>
+
+          <div fxFlex="30%">
+            <strong>Acres Burned</strong>
+          </div>
+          <div fxFlex>
+            {{event.acresBurned}}
+          </div>
+
+          <div fxFlex="30%">
+            <strong>Evacuation</strong>
+          </div>
+          <div fxFlex>
+            {{event.evacuation}}
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Map Thumbnail -->
+      <div id="event-map-thumbnail" fxFlex fxHide.lt-sm>
+        <img src="{{event.file}}" width="300" />
+      </div>
+
+    </div>
+
+    <mat-action-row fxLayout fxLayoutGap="8px">
+      <!-- Action Row Buttons -->
+      <a mat-mini-fab routerLink="/events/{{event.id}}" color="warn" matTooltip="Resources"><mat-icon>map</mat-icon></a>
+      <a mat-mini-fab routerLink="/reports" color="warn" matTooltip="Report Incident"><mat-icon>add_a_photo</mat-icon></a>
+      <button mat-mini-fab (click)="checkIn()" color="warn" [disabled]="disableCheckIn" matTooltip="Check in"><mat-icon>location_on</mat-icon></button>
+      <!--<a mat-mini-fab routerLink="/resources" color="warn" matTooltip="Resources"><mat-icon>local_hospital</mat-icon></a>-->
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>

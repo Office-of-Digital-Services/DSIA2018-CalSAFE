@@ -1,0 +1,11 @@
+.navbar-fill-space {
+  flex: 1 1 auto;
+}
+
+.warning-bar {
+  font-size: larger;
+}
+
+#CalSAFE {
+  height: 25px;
+}

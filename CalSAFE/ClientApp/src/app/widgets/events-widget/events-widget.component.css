@@ -1,0 +1,18 @@
+.align-left {
+  position: absolute;
+  left: 5px;
+}
+
+#event-map-thumbnail{
+  width: 100%;
+}
+
+button {
+  margin: 0 5px 0 5px;
+}
+
+img {
+  height: auto;
+  width: auto;
+  max-width: 300px;
+}
